@@ -1,0 +1,17 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1893448595, guid: a040fb66244a7f54289914d98ea4ef7d, type: 3}
+  m_Name: Light-Switches-On
+  m_EditorClassIdentifier: 
+  _data:
+    _json: '{"graph":{"variables":{"collection":{"$content":[],"$version":"A"},"$version":"A"},"controlInputDefinitions":[],"controlOutputDefinitions":[],"valueInputDefinitions":[],"valueOutputDefinitions":[],"title":"Light-Switches-On","summary":null,"pan":{"x":-379.4333,"y":106.4806},"zoom":1.0,"elements":[{"coroutine":false,"defaultValues":{},"position":{"x":-775.0,"y":-133.0},"guid":"13c5c75b-b07f-4f2b-9ad0-4c5c9988e98a","$version":"A","$type":"Bolt.Start"},{"coroutine":false,"defaultValues":{},"position":{"x":-806.0,"y":65.0},"guid":"d6e3fb2f-6159-4070-868c-b68ae8924539","$version":"A","$type":"Bolt.Update"},{"coroutine":false,"defaultValues":{"target":null},"position":{"x":-624.0,"y":35.0},"guid":"59a8f662-2990-4c86-98c7-7839ce4f2362","$version":"A","$type":"Bolt.OnTriggerEnter","$id":"13"},{"defaultValues":{},"position":{"x":-158.0,"y":-142.0},"guid":"3a54e1bb-de4d-4014-bc0a-3417d6ac5ff1","$version":"A","$type":"Bolt.Branch"},{"member":{"name":"enabled","parameterTypes":null,"targetType":"UnityEngine.Light","targetTypeName":"UnityEngine.Light","$version":"A"},"defaultValues":{"target":null},"position":{"x":-422.0,"y":154.0},"guid":"6850892b-55f8-48d5-ac0a-323fabb4b6fb","$version":"A","$type":"Bolt.GetMember","$id":"17"},{"defaultValues":{},"position":{"x":-237.0,"y":122.0},"guid":"30db8b7d-a96c-4a4a-ad79-1f1a1247f9ec","$version":"A","$type":"Bolt.Branch","$id":"20"},{"member":{"name":"enabled","parameterTypes":null,"targetType":"UnityEngine.Light","targetTypeName":"UnityEngine.Light","$version":"A"},"defaultValues":{"target":null},"position":{"x":-463.0,"y":-113.0},"guid":"5aa15e03-e3b5-45d1-9608-eb870f6cacb0","$version":"A","$type":"Bolt.GetMember"},{"chainable":false,"member":{"name":"enabled","parameterTypes":null,"targetType":"UnityEngine.Light","targetTypeName":"UnityEngine.Light","$version":"A"},"defaultValues":{"target":null,"input":{"$content":true,"$type":"System.Boolean"}},"position":{"x":-49.0,"y":28.0},"guid":"a6289da1-fd2c-4274-8379-56e0487b2fc3","$version":"A","$type":"Bolt.SetMember","$id":"25"},{"sourceUnit":{"$ref":"13"},"sourceKey":"trigger","destinationUnit":{"$ref":"20"},"destinationKey":"enter","guid":"a9db5806-17b6-42c6-9ea1-5fe710adb85a","$type":"Bolt.ControlConnection"},{"sourceUnit":{"$ref":"20"},"sourceKey":"ifTrue","destinationUnit":{"$ref":"25"},"destinationKey":"assign","guid":"8291d88c-d540-4a6b-8986-02c23899e7e1","$type":"Bolt.ControlConnection"},{"sourceUnit":{"$ref":"17"},"sourceKey":"value","destinationUnit":{"$ref":"20"},"destinationKey":"condition","guid":"c0b5dd69-1a34-4146-86c5-85948d124815","$type":"Bolt.ValueConnection"},{"sourceUnit":{"$ref":"13"},"sourceKey":"collider","destinationUnit":{"$ref":"17"},"destinationKey":"target","guid":"d099888f-f6bc-4755-98fa-c3f2af915ee7","$type":"Bolt.ValueConnection"}],"$version":"A"}}'
+    _objectReferences: []
