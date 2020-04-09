@@ -43,6 +43,11 @@ public class AI : Actor
             }
             StartCoroutine(spriteFlashCoroutine);
         }
+        if (other.CompareTag("PlayerBullets"))
+        {
+            DecreaseHealth(playerController.AttackDamage);
+ 
+        }
     }
     public void CoolDownTimer()
     {

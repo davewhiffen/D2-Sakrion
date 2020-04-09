@@ -9,19 +9,27 @@ public class Boss : AI
     public float jumpForce;
 
     public GameObject ShockGrenade;
+    public GameObject RopeAttack;
+    public GameObject ShootingAI;
+    public GameObject GrenadeAI;
+
+    public float radius = 20f;
+    int SummonAmount = 1;
     public enum States {
         Idle,
         Move,
         Jump,
         ShockCircle,
         FireBullet,
-        RopeAttack
+        RopeAttack,
+        Summon
     }
 
     public States CurrentState { set; get; } = States.Move;
     // Start is called before the first frame update
     void Start()
     {
+        MaxHealth = 200; 
         speed = 500;
         StartCoroutine(RunAI());
         this.transform.LookAt(playerController.gameObject.transform);
@@ -32,6 +40,9 @@ public class Boss : AI
         if (rBody.velocity == Vector3.zero) {
             inAir = false;
             
+        }
+        if (Input.anyKeyDown) {
+            DecreaseHealth(50);
         }
         CustomGravity();
     }
@@ -75,6 +86,10 @@ public class Boss : AI
                     CurrentState = States.FireBullet;
 
             }
+            if (health < MaxHealth/2 && SummonAmount >0)
+            {
+                CurrentState = States.Summon;
+            }
             switch (previousAIState)
             {
                 case States.FireBullet:
@@ -93,6 +108,9 @@ public class Boss : AI
                     CurrentState = States.Move;
                     break;
 
+                case States.Summon:
+                    CurrentState = States.Move;
+                    break;
                 default:
                     break;
             }
@@ -120,6 +138,10 @@ public class Boss : AI
                 break;
             case States.RopeAttack:
                 ropeAttack();
+                CoolDownTimer();
+                break;
+            case States.Summon:
+                Summon();
                 CoolDownTimer();
                 break;
             default:
@@ -152,8 +174,27 @@ public class Boss : AI
     }
 
     void ropeAttack() {
-
+        Instantiate(RopeAttack, spawnPoint.transform.position, spawnPoint.transform.rotation);
         StartCoroutine(RunAI());
     }
-
+    // summon backups 
+    void Summon() {
+        if (SummonAmount > 0) {
+            for (int i = 1; i < 7; i++)
+            {
+                float angle = i * Mathf.PI * 2f / 6;
+                Vector3 newPos = new Vector3((Mathf.Cos(angle) * radius) * 2 + transform.position.x, transform.position.y, (Mathf.Sin(angle) * radius) + transform.position.z);
+                if (i<4)
+                {
+                    Instantiate(ShootingAI, newPos, transform.rotation);
+                }
+                else if (i>=4)
+                {
+                    Instantiate(GrenadeAI, newPos, transform.rotation);
+                }
+            }
+            SummonAmount--;
+        }
+        StartCoroutine(RunAI());
+    }
 }

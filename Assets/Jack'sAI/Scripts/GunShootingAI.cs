@@ -26,9 +26,12 @@ public class GunShootingAI : AI
         {
             case States.Idle:
                 Fire();
+                CoolDownTimer();
                 break;
             case States.Move:
+                MoveForward();
                 Fire();
+                CoolDownTimer();
                 break;
             default:
                 break;
@@ -39,10 +42,13 @@ public class GunShootingAI : AI
     // Update is called once per frame
     void Update()
     {
-        MoveForward();
-        if (dis < 75) {
+        //MoveForward();
+        if (dis < 75)
+        {
             CurrentState = States.Idle;
         }
+        else
+            CurrentState = States.Move;
     }
     void MoveForward()
     {
@@ -57,7 +63,6 @@ public class GunShootingAI : AI
     {
 
         yield return new WaitForSeconds(1f);
-        CoolDownTimer();
         HandleStates();
 
     }
@@ -76,5 +81,6 @@ public class GunShootingAI : AI
         {
             Instantiate(spawningAttacks, spawnPoint.transform.position, spawnPoint.transform.rotation);
         }
+        StartCoroutine(RunAI());
     }
 }
