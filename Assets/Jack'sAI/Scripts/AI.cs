@@ -2,71 +2,74 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class AI : Actor
+namespace Opsive.UltimateCharacterController.Traits
 {
-
-    protected PlayerController playerController;
-    IEnumerator spriteFlashCoroutine;
-    public GameObject spawningAttacks;
-
-    protected bool CoolDownStarted;
-    public float cooldown;
-    float maxCoolDown;
-
-    protected override void Awake()
+    public class AI : Actor
     {
-        base.Awake();
-        playerController = GameObject.FindWithTag("Player").GetComponent<PlayerController>();
-        maxCoolDown = cooldown;
-        CoolDownStarted = false;
-    }
 
-    //changes z-rotation to look at player
-    protected virtual void FacePlayer()
-    {
-        Vector3 distanceToPlayer = playerController.transform.position - transform.position;
+        protected PlayerController playerController;
+        IEnumerator spriteFlashCoroutine;
+        public GameObject spawningAttacks;
 
-        Vector3 currentRotation = transform.eulerAngles;
-        currentRotation.z = Mathf.Rad2Deg * Mathf.Atan2(distanceToPlayer.x, distanceToPlayer.y);
-        transform.eulerAngles = -currentRotation;
-    }
-    //handle taking damage from player attacks
-    void OnTriggerEnter2D(Collider2D other)
-    {
-        if (other.CompareTag("PlayerHitBox"))
+        protected bool CoolDownStarted;
+        public float cooldown;
+        float maxCoolDown;
+
+        protected override void Awake()
         {
-            //DecreaseHealth(playerController.attack);
+            base.Awake();
+            playerController = GameObject.FindWithTag("Player").GetComponent<PlayerController>();
+            maxCoolDown = cooldown;
+            CoolDownStarted = false;
+        }
 
-            if (spriteFlashCoroutine != null)
+        //changes z-rotation to look at player
+        protected virtual void FacePlayer()
+        {
+            Vector3 distanceToPlayer = playerController.transform.position - transform.position;
+
+            Vector3 currentRotation = transform.eulerAngles;
+            currentRotation.z = Mathf.Rad2Deg * Mathf.Atan2(distanceToPlayer.x, distanceToPlayer.y);
+            transform.eulerAngles = -currentRotation;
+        }
+        //handle taking damage from player attacks
+        void OnTriggerEnter2D(Collider2D other)
+        {
+            if (other.CompareTag("PlayerHitBox"))
             {
-                StopCoroutine(spriteFlashCoroutine);
-            }
-            StartCoroutine(spriteFlashCoroutine);
-        }
-        if (other.CompareTag("PlayerBullets"))
-        {
-            DecreaseHealth(playerController.AttackDamage);
- 
-        }
-    }
-    public void CoolDownTimer()
-    {
-        CoolDownStarted = true;
-    }
-    public IEnumerator Timer()
-    {
-        if (CoolDownStarted)
-        {
-            yield return new WaitForSeconds(1);
-            cooldown--;
-        }
-        if (cooldown <= 0)
-        {
-           cooldown = maxCoolDown;
-           CoolDownStarted = false;
-           StopCoroutine(Timer());
-        }
-        
-    }
+                //DecreaseHealth(playerController.attack);
 
+                if (spriteFlashCoroutine != null)
+                {
+                    StopCoroutine(spriteFlashCoroutine);
+                }
+                StartCoroutine(spriteFlashCoroutine);
+            }
+            if (other.CompareTag("PlayerBullets"))
+            {
+                DecreaseHealth(playerController.AttackDamage);
+
+            }
+        }
+        public void CoolDownTimer()
+        {
+            CoolDownStarted = true;
+        }
+        public IEnumerator Timer()
+        {
+            if (CoolDownStarted)
+            {
+                yield return new WaitForSeconds(1);
+                cooldown--;
+            }
+            if (cooldown <= 0)
+            {
+                cooldown = maxCoolDown;
+                CoolDownStarted = false;
+                StopCoroutine(Timer());
+            }
+
+        }
+
+    }
 }

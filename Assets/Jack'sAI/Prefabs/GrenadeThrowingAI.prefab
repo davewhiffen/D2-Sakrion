@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3929152407091065781}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: SpawnPoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -42,11 +42,12 @@ GameObject:
   - component: {fileID: 2804474003626147393}
   - component: {fileID: 2804474003626147392}
   - component: {fileID: 2804474003626147395}
-  - component: {fileID: 5610899669041277566}
   - component: {fileID: 2804474003626147397}
   - component: {fileID: 2804474003626147396}
   - component: {fileID: 4027821917446073756}
-  m_Layer: 0
+  - component: {fileID: 6595075976972425809}
+  - component: {fileID: 9164291795185851374}
+  m_Layer: 9
   m_Name: GrenadeThrowingAI
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -128,21 +129,6 @@ CapsuleCollider:
   m_Height: 2
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &5610899669041277566
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2804474003626147399}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 98dc6d7b5af11f5479f7fe663cc6409f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  spawnPoint: {fileID: 0}
-  spawningAttacks: {fileID: 0}
-  cooldown: 0
 --- !u!54 &2804474003626147397
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -193,7 +179,87 @@ MonoBehaviour:
   spawnPoint: {fileID: 2285998767588639256}
   spawningAttacks: {fileID: 864746352751559278, guid: 6043cd9e3ecc3374fa8253fdb7801cad,
     type: 3}
-  cooldown: 5
+  cooldown: 20
+--- !u!114 &6595075976972425809
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2804474003626147399}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e30da4fa96ed67145a2c5310eca67bb4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Attributes:
+  - m_States:
+    - m_Name: Default
+      m_Preset: {fileID: 0}
+      m_BlockList: []
+      m_Default: 1
+    m_Name: Health
+    m_MinValue: 0
+    m_MaxValue: 100
+    m_Value: 100
+    m_AutoUpdateValueType: 0
+    m_AutoUpdateStartDelay: 1
+    m_AutoUpdateInterval: 0.1
+    m_AutoUpdateAmount: 0.2
+--- !u!114 &9164291795185851374
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2804474003626147399}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6c1eefff1d3d6844f88ad19752c306e0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_States:
+  - m_Name: Default
+    m_Preset: {fileID: 0}
+    m_BlockList: []
+    m_Default: 1
+  m_Invincible: 0
+  m_TimeInvincibleAfterSpawn: 0
+  m_HealthAttributeName: Health
+  m_ShieldAttributeName: 
+  m_Hitboxes: []
+  m_MaxHitboxCollisionCount: 10
+  m_SpawnedObjectsOnDeath: []
+  m_DestroyedObjectsOnDeath: []
+  m_DeactivateOnDeath: 0
+  m_DeactivateOnDeathDelay: 0
+  m_DeathLayer:
+    serializedVersion: 2
+    m_Bits: 0
+  m_TakeDamageAudioClipSet:
+    m_Delay: 0
+    m_AudioClips: []
+  m_HealAudioClipSet:
+    m_Delay: 0
+    m_AudioClips: []
+  m_DeathAudioClipSet:
+    m_Delay: 0
+    m_AudioClips: []
+  m_OnDamageEvent:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: Opsive.UltimateCharacterController.Events.UnityFloatVector3Vector3GameObjectEvent,
+      Opsive.UltimateCharacterController, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_OnHealEvent:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: Opsive.UltimateCharacterController.Events.UnityFloatEvent, Opsive.UltimateCharacterController,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_OnDeathEvent:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: Opsive.UltimateCharacterController.Events.UnityVector3Vector3GameObjectEvent,
+      Opsive.UltimateCharacterController, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
 --- !u!1 &7550706697696119849
 GameObject:
   m_ObjectHideFlags: 0
@@ -206,7 +272,7 @@ GameObject:
   - component: {fileID: 5081280474815213334}
   - component: {fileID: 3391556381682765685}
   - component: {fileID: 3577020761740787155}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Cube
   m_TagString: Untagged
   m_Icon: {fileID: 0}
