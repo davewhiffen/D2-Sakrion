@@ -117,7 +117,7 @@ GameObject:
   - component: {fileID: 8614344031076713893}
   - component: {fileID: 8122918982856488836}
   m_Layer: 26
-  m_Name: Turret
+  m_Name: Harpy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -280,7 +280,7 @@ MonoBehaviour:
   m_MuzzleFlash: {fileID: 1156049964569698, guid: 00274eefc0873a64594c29b75cff5d72,
     type: 3}
   m_MuzzleFlashLocation: {fileID: 7822606550773788988}
-  m_FireAudioClip: {fileID: 8300000, guid: b0c778715cdaac34d84a7b6b23583587, type: 3}
+  m_FireAudioClip: {fileID: 8300000, guid: 56ee7d12426c4794397e7948da148e42, type: 3}
 --- !u!114 &5309213678493786680
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -332,8 +332,8 @@ MonoBehaviour:
       m_Default: 1
     m_Name: Health
     m_MinValue: 0
-    m_MaxValue: 100
-    m_Value: 100
+    m_MaxValue: 120
+    m_Value: 120
     m_AutoUpdateValueType: 0
     m_AutoUpdateStartDelay: 1
     m_AutoUpdateInterval: 0.1
@@ -929,7 +929,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 404966, guid: 0a27a995f3451f741b32f5f6bf27155b, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.514
+      value: 0.41
       objectReference: {fileID: 0}
     - target: {fileID: 404966, guid: 0a27a995f3451f741b32f5f6bf27155b, type: 3}
       propertyPath: m_LocalPosition.z
@@ -969,15 +969,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 404966, guid: 0a27a995f3451f741b32f5f6bf27155b, type: 3}
       propertyPath: m_LocalScale.x
-      value: 1.3232
+      value: 1.8212143
       objectReference: {fileID: 0}
     - target: {fileID: 404966, guid: 0a27a995f3451f741b32f5f6bf27155b, type: 3}
       propertyPath: m_LocalScale.y
-      value: 1.3232
+      value: 1.8212143
       objectReference: {fileID: 0}
     - target: {fileID: 404966, guid: 0a27a995f3451f741b32f5f6bf27155b, type: 3}
       propertyPath: m_LocalScale.z
-      value: 1.3232
+      value: 1.8212143
       objectReference: {fileID: 0}
     - target: {fileID: 19829086, guid: 0a27a995f3451f741b32f5f6bf27155b, type: 3}
       propertyPath: InitialModule.startColor.maxColor.r

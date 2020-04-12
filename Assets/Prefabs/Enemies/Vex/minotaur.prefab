@@ -519,7 +519,7 @@ GameObject:
   - component: {fileID: 1516793406527892368}
   - component: {fileID: 869277966268219399}
   m_Layer: 26
-  m_Name: Turret
+  m_Name: Minotaur
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -683,7 +683,7 @@ MonoBehaviour:
   m_MuzzleFlash: {fileID: 1156049964569698, guid: 00274eefc0873a64594c29b75cff5d72,
     type: 3}
   m_MuzzleFlashLocation: {fileID: 6529257982275170121}
-  m_FireAudioClip: {fileID: 8300000, guid: b0c778715cdaac34d84a7b6b23583587, type: 3}
+  m_FireAudioClip: {fileID: 8300000, guid: 44a493c8e5d43894fa102a1443853ac9, type: 3}
 --- !u!114 &3102823925544711231
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1066,7 +1066,7 @@ GameObject:
   - component: {fileID: 2724723989638187827}
   - component: {fileID: 4150583796108804449}
   m_Layer: 26
-  m_Name: Turret
+  m_Name: Turret (Body)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

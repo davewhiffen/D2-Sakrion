@@ -57,7 +57,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2124351398237151815}
   m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 42.16, y: 1.2, z: 15.02}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.53845, y: 0.53845, z: 0.53845}
   m_Children:
   - {fileID: 5424627652172517725}
@@ -152,7 +152,7 @@ GameObject:
   - component: {fileID: 3233021478940600209}
   - component: {fileID: 6710473386282727736}
   m_Layer: 26
-  m_Name: Turret
+  m_Name: Turret (Body)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -453,7 +453,7 @@ GameObject:
   - component: {fileID: 1054760449326679351}
   - component: {fileID: 7833034518502885378}
   m_Layer: 26
-  m_Name: Turret
+  m_Name: Hobgoblin
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -617,7 +617,7 @@ MonoBehaviour:
   m_MuzzleFlash: {fileID: 1156049964569698, guid: 00274eefc0873a64594c29b75cff5d72,
     type: 3}
   m_MuzzleFlashLocation: {fileID: 1334407497489734083}
-  m_FireAudioClip: {fileID: 8300000, guid: 049ffb9c8f610f24cbe34544ceebc2af, type: 3}
+  m_FireAudioClip: {fileID: 8300000, guid: 57ca5fe41ecb67343946266950d111e7, type: 3}
 --- !u!114 &868238309268093057
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1120,15 +1120,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 404966, guid: 0a27a995f3451f741b32f5f6bf27155b, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.19
+      value: -0.03
       objectReference: {fileID: 0}
     - target: {fileID: 404966, guid: 0a27a995f3451f741b32f5f6bf27155b, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.511
+      value: -1.309
       objectReference: {fileID: 0}
     - target: {fileID: 404966, guid: 0a27a995f3451f741b32f5f6bf27155b, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.184
+      value: 0.328
       objectReference: {fileID: 0}
     - target: {fileID: 404966, guid: 0a27a995f3451f741b32f5f6bf27155b, type: 3}
       propertyPath: m_LocalRotation.x

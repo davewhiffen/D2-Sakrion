@@ -208,7 +208,7 @@ GameObject:
   - component: {fileID: 5477133172317091578}
   - component: {fileID: 6395225346168818577}
   m_Layer: 26
-  m_Name: Turret
+  m_Name: Cyclops
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -311,19 +311,19 @@ MonoBehaviour:
   m_FireLocation: {fileID: 3757931525410561609}
   m_FireRange: 90
   m_FireDelay: 1.9
-  m_Projectile: {fileID: 108410, guid: 8eb5d99af2e3d6a428bf7031b335f706, type: 3}
+  m_Projectile: {fileID: 108410, guid: 97f34eb2f036dfa458bdc5fbe147b813, type: 3}
   m_VelocityMagnitude: 100
   m_ImpactLayers:
     serializedVersion: 2
     m_Bits: 4160880433
-  m_DamageAmount: 60
-  m_ImpactForce: 25.46
-  m_ImpactForceFrames: 4
+  m_DamageAmount: 80
+  m_ImpactForce: 40
+  m_ImpactForceFrames: 30
   m_SurfaceImpact: {fileID: 11400000, guid: f49abdd3bca87e54cb474256211b133e, type: 2}
   m_MuzzleFlash: {fileID: 1156049964569698, guid: 00274eefc0873a64594c29b75cff5d72,
     type: 3}
   m_MuzzleFlashLocation: {fileID: 5783416459263523383}
-  m_FireAudioClip: {fileID: 8300000, guid: b0c778715cdaac34d84a7b6b23583587, type: 3}
+  m_FireAudioClip: {fileID: 8300000, guid: 7b4e99f86f2634042a78e8004e1ede98, type: 3}
 --- !u!114 &6499926243092841065
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -720,7 +720,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4095148481573853851}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.62, y: 0.04, z: -0.26}
+  m_LocalPosition: {x: 0.36, y: -0.25, z: -0.028}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 5130080795480640375}
@@ -922,7 +922,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8408865750513592377}
   m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
-  m_LocalPosition: {x: 0.41, y: -0.26, z: 0}
+  m_LocalPosition: {x: 0.35, y: -0.26, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 5130080795480640375}
@@ -1028,7 +1028,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 404966, guid: 0a27a995f3451f741b32f5f6bf27155b, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.567
+      value: 0.278
       objectReference: {fileID: 0}
     - target: {fileID: 404966, guid: 0a27a995f3451f741b32f5f6bf27155b, type: 3}
       propertyPath: m_LocalPosition.y
@@ -1069,6 +1069,18 @@ PrefabInstance:
     - target: {fileID: 404966, guid: 0a27a995f3451f741b32f5f6bf27155b, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 404966, guid: 0a27a995f3451f741b32f5f6bf27155b, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1.7225
+      objectReference: {fileID: 0}
+    - target: {fileID: 404966, guid: 0a27a995f3451f741b32f5f6bf27155b, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1.7225
+      objectReference: {fileID: 0}
+    - target: {fileID: 404966, guid: 0a27a995f3451f741b32f5f6bf27155b, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1.7225
       objectReference: {fileID: 0}
     - target: {fileID: 19829086, guid: 0a27a995f3451f741b32f5f6bf27155b, type: 3}
       propertyPath: InitialModule.startColor.maxColor.r
