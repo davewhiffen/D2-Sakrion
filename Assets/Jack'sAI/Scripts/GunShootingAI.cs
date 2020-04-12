@@ -16,7 +16,7 @@ namespace Opsive.UltimateCharacterController.Traits
         // Start is called before the first frame update
         void Start()
         {
-            speed = 500;
+            speed = 1000;
             StartCoroutine(RunAI());
             this.transform.LookAt(playerController.gameObject.transform);
         }
@@ -82,6 +82,7 @@ namespace Opsive.UltimateCharacterController.Traits
             if (CoolDownStarted == false)
             {
                 Instantiate(spawningAttacks, spawnPoint.transform.position, spawnPoint.transform.rotation);
+                cooldown = Random.Range(15, 20);
             }
             StartCoroutine(RunAI());
         }

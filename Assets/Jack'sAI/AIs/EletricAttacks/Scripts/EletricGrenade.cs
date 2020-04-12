@@ -8,12 +8,12 @@ namespace Opsive.UltimateCharacterController.Traits
     {
         public GameObject shockCircle;
         public float radius = 20f;
-        PlayerController playerController;
+        CharacterHealth playerController;
 
         // Start is called before the first frame update
         void Start()
         {
-            playerController = GameObject.FindWithTag("Player").GetComponent<PlayerController>();
+            playerController = GameObject.FindWithTag("Player").GetComponent<CharacterHealth>();
 
             float initialAngle = 45;
             var rigid = GetComponent<Rigidbody>();
