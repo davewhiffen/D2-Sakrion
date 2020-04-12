@@ -2,18 +2,29 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerController : Actor
+namespace Opsive.UltimateCharacterController.Traits
 {
-    public bool shocked { get; set; }
-    // Start is called before the first frame update
-    void Start()
+    public class PlayerController : Actor
     {
-        
-    }
+        public bool shocked { get; set; }
+        // Start is called before the first frame update
+        void Start()
+        {
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+        }
+
+        // Update is called once per frame
+        void Update()
+        {
+            if (shocked)
+            {
+                this.rBody.velocity = Vector3.zero;
+            }
+
+        }
+        private void OnTriggerEnter(Collider other)
+        {
+
+        }
     }
 }
