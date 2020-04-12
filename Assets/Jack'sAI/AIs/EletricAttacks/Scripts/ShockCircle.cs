@@ -7,12 +7,12 @@ namespace Opsive.UltimateCharacterController.Traits
     public class ShockCircle : MonoBehaviour
     {
         public float time;
-        PlayerController player;
+        CharacterHealth player;
         // Start is called before the first frame update
         void Start()
         {
             StartCoroutine("spawned");
-            player = FindObjectOfType<PlayerController>();
+            player = FindObjectOfType<CharacterHealth>();
         }
 
         // Update is called once per frame

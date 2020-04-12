@@ -7,7 +7,7 @@ namespace Opsive.UltimateCharacterController.Traits
     public class AI : Actor
     {
 
-        protected PlayerController playerController;
+        protected CharacterHealth playerController;
         IEnumerator spriteFlashCoroutine;
         public GameObject spawningAttacks;
 
@@ -18,7 +18,7 @@ namespace Opsive.UltimateCharacterController.Traits
         protected override void Awake()
         {
             base.Awake();
-            playerController = GameObject.FindWithTag("Player").GetComponent<PlayerController>();
+            playerController = GameObject.FindWithTag("Player").GetComponent<CharacterHealth>();
             maxCoolDown = cooldown;
             CoolDownStarted = false;
         }
@@ -44,11 +44,6 @@ namespace Opsive.UltimateCharacterController.Traits
                     StopCoroutine(spriteFlashCoroutine);
                 }
                 StartCoroutine(spriteFlashCoroutine);
-            }
-            if (other.CompareTag("PlayerBullets"))
-            {
-                DecreaseHealth(playerController.AttackDamage);
-
             }
         }
         public void CoolDownTimer()

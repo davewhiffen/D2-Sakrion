@@ -24,7 +24,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 571962094616211482}
   m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
-  m_LocalPosition: {x: 0.408, y: 0.586, z: -1.176}
+  m_LocalPosition: {x: 0.408, y: -4.54, z: -1.18}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 571962094623160307}
@@ -43,7 +43,6 @@ GameObject:
   - component: {fileID: 571962095815548927}
   - component: {fileID: 571962095815548925}
   - component: {fileID: 571962095815548678}
-  - component: {fileID: 571962095815548921}
   - component: {fileID: 571962095815548920}
   - component: {fileID: 571962095815548923}
   - component: {fileID: 571962095815548922}
@@ -54,7 +53,7 @@ GameObject:
   - component: {fileID: 4660359883397002189}
   m_Layer: 26
   m_Name: GrendaeAI
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -232,37 +231,6 @@ MonoBehaviour:
     type: 3}
   m_MuzzleFlashLocation: {fileID: 571962095966105139}
   m_FireAudioClip: {fileID: 8300000, guid: b0c778715cdaac34d84a7b6b23583587, type: 3}
---- !u!114 &571962095815548921
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 571962094623648721}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 69bf5fc13e796d141b5f806bad87f704, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_States:
-  - m_Name: Default
-    m_Preset: {fileID: 0}
-    m_BlockList: []
-    m_Default: 1
-  m_PositioningMode: 1
-  m_Grouping: -1
-  m_MinRespawnTime: 10
-  m_MaxRespawnTime: 15
-  m_ScheduleRespawnOnDeath: 1
-  m_ScheduleRespawnOnDisable: 1
-  m_RespawnAudioClipSet:
-    m_Delay: 0
-    m_AudioClips: []
-  m_OnRespawnEvent:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
 --- !u!114 &571962095815548920
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -156,7 +156,7 @@ namespace Opsive.UltimateCharacterController.Traits
         {
             rBody.velocity = transform.forward * speed * Time.deltaTime;
             spawnPoint.transform.LookAt(playerController.gameObject.transform);
-            Instantiate(spawningAttacks, spawnPoint.transform.position, spawnPoint.transform.rotation);
+            //Instantiate(spawningAttacks, spawnPoint.transform.position, spawnPoint.transform.rotation);
             StartCoroutine(RunAI());
         }
         void JumpForward()
@@ -177,12 +177,14 @@ namespace Opsive.UltimateCharacterController.Traits
 
         void ShockCirlce()
         {
+            spawnPoint.transform.LookAt(playerController.gameObject.transform);
             Instantiate(ShockGrenade, spawnPoint.transform.position, spawnPoint.transform.rotation);
             StartCoroutine(RunAI());
         }
 
         void ropeAttack()
         {
+            spawnPoint.transform.LookAt(playerController.gameObject.transform);
             Instantiate(RopeAttack, spawnPoint.transform.position, spawnPoint.transform.rotation);
             StartCoroutine(RunAI());
         }

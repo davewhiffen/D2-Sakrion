@@ -6,7 +6,7 @@ namespace Opsive.UltimateCharacterController.Traits
 {
     public class RopeAttack : MonoBehaviour
     {
-        PlayerController playerController;
+        CharacterHealth playerController;
         bool Started;
         float spinx = 0;
         float spiny = 0;
@@ -15,7 +15,7 @@ namespace Opsive.UltimateCharacterController.Traits
         void Start()
         {
             this.transform.rotation = Quaternion.Euler(-90, 0, 0);
-            playerController = GameObject.FindWithTag("Player").GetComponent<PlayerController>();
+            playerController = GameObject.FindWithTag("Player").GetComponent<CharacterHealth>();
 
             float initialAngle = 45;
             var rigid = GetComponent<Rigidbody>();

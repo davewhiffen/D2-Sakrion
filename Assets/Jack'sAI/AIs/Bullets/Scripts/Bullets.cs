@@ -1,38 +1,46 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
-public class Bullets : MonoBehaviour
+namespace Opsive.UltimateCharacterController.Traits
 {
-    public float speed;
-    // Start is called before the first frame update
-    public float time;
-    Rigidbody rBody;
-    void Start()
+    public class Bullets : MonoBehaviour
     {
-        rBody = GetComponent<Rigidbody>();
-        StartCoroutine("DestroySelf");
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        rBody.AddForce(transform.forward * speed);
-    }
-    IEnumerator DestroySelf()
-    {
-
-        yield return new WaitForSeconds(time);
-
-        Destroy(this.gameObject);
-    }
-    private void OnTriggerEnter(Collider other)
-    {
-        if (other.CompareTag("Player")) {
-            //take dmg
-            
+        public float speed;
+        // Start is called before the first frame update
+        public float time;
+        Rigidbody rBody;
+        CharacterHealth player;
+        void Start()
+        {
+            rBody = GetComponent<Rigidbody>();
+            StartCoroutine("DestroySelf");
+            player = FindObjectOfType<CharacterHealth>();
         }
-        Destroy(this.gameObject);
-    }
 
+        // Update is called once per frame
+        void Update()
+        {
+            rBody.AddForce(transform.forward * speed);
+        }
+        IEnumerator DestroySelf()
+        {
+
+            yield return new WaitForSeconds(time);
+
+            Destroy(this.gameObject);
+        }
+        private void OnTriggerEnter(Collider other)
+        {
+            if (other.CompareTag("Player"))
+            {
+                player.gameObject.GetComponent<CharacterHealth>().Damage(5);
+                Destroy(this.gameObject);
+            }
+            else
+            {
+                Destroy(this.gameObject);
+            }
+        }
+
+    }
 }
