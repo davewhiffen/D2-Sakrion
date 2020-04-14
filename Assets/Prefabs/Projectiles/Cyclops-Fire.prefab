@@ -4864,7 +4864,7 @@ MonoBehaviour:
     m_Bits: 2348940579
   m_SurfaceImpact: {fileID: 11400000, guid: f49abdd3bca87e54cb474256211b133e, type: 2}
   m_ForceMultiplier: 40
-  m_BounceMode: 1
+  m_BounceMode: 0
   m_BounceMultiplier: 1
   m_MaxCollisionCount: 5
   m_MaxPositionCount: 150

@@ -688,7 +688,6 @@ GameObject:
   - component: {fileID: 135527081505468690}
   - component: {fileID: 114494557598049444}
   - component: {fileID: 114565762927594060}
-  - component: {fileID: 3131207741093734761}
   m_Layer: 28
   m_Name: RocketLauncherPickup 1
   m_TagString: Untagged
@@ -744,8 +743,8 @@ SphereCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.5
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Radius: 1.6772577
+  m_Center: {x: -0.037380036, y: 0, z: 0}
 --- !u!114 &114494557598049444
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -812,20 +811,6 @@ MonoBehaviour:
   m_ActiveAudioClipSet:
     m_Delay: 0
     m_AudioClips: []
---- !u!136 &3131207741093734761
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1966656114892566}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  m_Radius: 0.5
-  m_Height: 3.4103196
-  m_Direction: 1
-  m_Center: {x: 0, y: -0.10136059, z: 0}
 --- !u!1001 &3398939310594051116
 PrefabInstance:
   m_ObjectHideFlags: 0

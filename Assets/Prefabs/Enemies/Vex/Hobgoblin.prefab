@@ -136,7 +136,7 @@ BoxCollider:
   m_GameObject: {fileID: 2124351398237151815}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_Size: {x: 3.0300007, y: 5, z: 0.20000005}
   m_Center: {x: 0, y: 0, z: 0}
@@ -489,8 +489,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 127.523865, y: 46.96836, z: 109.14431}
-  m_Center: {x: 18.518835, y: -9.37006, z: -3.2373128}
+  m_Size: {x: 300.1953, y: 175.76845, z: 270.1036}
+  m_Center: {x: 15.964638, y: -28.663582, z: -35.85852}
 --- !u!82 &8339897606279313532
 AudioSource:
   m_ObjectHideFlags: 0
@@ -603,7 +603,7 @@ MonoBehaviour:
   m_TurretHead: {fileID: 5039353103086869653}
   m_RotationSpeed: 30
   m_FireLocation: {fileID: 937556934621587057}
-  m_FireRange: 65
+  m_FireRange: 70
   m_FireDelay: 2
   m_Projectile: {fileID: 108410, guid: 8eb5d99af2e3d6a428bf7031b335f706, type: 3}
   m_VelocityMagnitude: 100
@@ -611,7 +611,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 4160880433
   m_DamageAmount: 30
-  m_ImpactForce: 10.44
+  m_ImpactForce: 15
   m_ImpactForceFrames: 4
   m_SurfaceImpact: {fileID: 11400000, guid: f49abdd3bca87e54cb474256211b133e, type: 2}
   m_MuzzleFlash: {fileID: 1156049964569698, guid: 00274eefc0873a64594c29b75cff5d72,

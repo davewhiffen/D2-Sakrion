@@ -13,6 +13,8 @@ GameObject:
   - component: {fileID: 3386435639052026991}
   - component: {fileID: 3364973925019464136}
   - component: {fileID: 3253994229673226062}
+  - component: {fileID: 3336324983505144171}
+  - component: {fileID: 8544839822629951833}
   m_Layer: 0
   m_Name: Railing (Single)
   m_TagString: Untagged
@@ -91,8 +93,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 9.790213, y: 0.20000032, z: 0.59445477}
-  m_Center: {x: 0, y: -9.846876, z: 6.311412}
+  m_Size: {x: 9.790213, y: 0.20000073, z: 0.29458988}
+  m_Center: {x: 0, y: -9.84688, z: 6.461342}
 --- !u!65 &3253994229673226062
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -104,5 +106,31 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 9.790213, y: 0.20000032, z: 0.87257653}
-  m_Center: {x: 0, y: -9.846872, z: 2.3982465}
+  m_Size: {x: 9.790213, y: 0.20000073, z: 0.38157108}
+  m_Center: {x: 0, y: -9.846872, z: 2.3875427}
+--- !u!65 &3336324983505144171
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4177447324149334328}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.17235437, y: 0.20000073, z: 7.2350307}
+  m_Center: {x: 4.808933, y: -9.846873, z: 3.013023}
+--- !u!65 &8544839822629951833
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4177447324149334328}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.20145573, y: 0.20000073, z: 7.213129}
+  m_Center: {x: -4.794383, y: -9.846873, z: 3.0020702}

@@ -4861,10 +4861,10 @@ MonoBehaviour:
   m_StartSidewaysVelocityMagnitude: 3
   m_ImpactLayers:
     serializedVersion: 2
-    m_Bits: 2415919083
+    m_Bits: 2348940579
   m_SurfaceImpact: {fileID: 11400000, guid: f49abdd3bca87e54cb474256211b133e, type: 2}
-  m_ForceMultiplier: 40
-  m_BounceMode: 1
+  m_ForceMultiplier: 50
+  m_BounceMode: 0
   m_BounceMultiplier: 1
   m_MaxCollisionCount: 5
   m_MaxPositionCount: 150
@@ -4873,7 +4873,7 @@ MonoBehaviour:
     m_AudioClips: []
   m_StickyLayers:
     serializedVersion: 2
-    m_Bits: 268435403
+    m_Bits: 201456899
   m_DestroyOnCollision: 1
   m_DestructionDelay: 0
   m_SpawnedObjectsOnDestruction: []

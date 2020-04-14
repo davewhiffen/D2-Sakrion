@@ -152,8 +152,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 127.523865, y: 46.96836, z: 109.14431}
-  m_Center: {x: 18.518835, y: -9.37006, z: -3.2373128}
+  m_Size: {x: 280.55383, y: 341.3188, z: 250.77696}
+  m_Center: {x: 17.532722, y: -115.95187, z: -7.9498177}
 --- !u!82 &4024329604515480305
 AudioSource:
   m_ObjectHideFlags: 0
@@ -264,18 +264,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_TurretHead: {fileID: 6509272708601417941}
-  m_RotationSpeed: 5
+  m_RotationSpeed: 30
   m_FireLocation: {fileID: 7279421526262772648}
-  m_FireRange: 70
-  m_FireDelay: 4
-  m_Projectile: {fileID: 109530, guid: 2b01538ded8a3d94e94d201dddc481f4, type: 3}
+  m_FireRange: 90
+  m_FireDelay: 3
+  m_Projectile: {fileID: 108410, guid: 8eb5d99af2e3d6a428bf7031b335f706, type: 3}
   m_VelocityMagnitude: 100
   m_ImpactLayers:
     serializedVersion: 2
     m_Bits: 4160880433
-  m_DamageAmount: 35
-  m_ImpactForce: 11.08
-  m_ImpactForceFrames: 4
+  m_DamageAmount: 50
+  m_ImpactForce: 40
+  m_ImpactForceFrames: 40
   m_SurfaceImpact: {fileID: 11400000, guid: f49abdd3bca87e54cb474256211b133e, type: 2}
   m_MuzzleFlash: {fileID: 1156049964569698, guid: 00274eefc0873a64594c29b75cff5d72,
     type: 3}
@@ -369,6 +369,7 @@ MonoBehaviour:
   m_MaxHitboxCollisionCount: 10
   m_SpawnedObjectsOnDeath:
   - {fileID: 153568, guid: cca79b260878071418290367024a6716, type: 3}
+  - {fileID: 1420985943883180, guid: 97c3696bb53c8054bafb1b24c24a1a3d, type: 3}
   m_DestroyedObjectsOnDeath: []
   m_DeactivateOnDeath: 1
   m_DeactivateOnDeathDelay: 0
